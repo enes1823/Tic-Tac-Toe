@@ -1,11 +1,35 @@
 import './App.css';
 
+const Square = ({value}) => {
+  const handleClick = () => {
+    console.log('Button was clicked!')
+  }
+
+  return (
+    <button className='square' onClick={handleClick}>{value}</button>
+  );
+}
+
 const App = () => {
   return(
     <div className="content">
-      <h1> Hello World</h1>
+      <div className="row">
+        <Square value="1" />
+        <Square value="2" />
+        <Square value="3" />
+      </div>
+      <div className="row">
+        <Square value="4" />
+        <Square value="5" />
+        <Square value="6" />
+      </div>
+      <div className="row">
+        <Square value="7" />
+        <Square value="8" />
+        <Square value="9" />
+      </div>
     </div>
-  )
+  );
 }
 
 export default App;
